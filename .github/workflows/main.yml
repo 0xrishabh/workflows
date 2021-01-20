@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: vpn
         run: |
-        curl ${{ secrets.FIFTHURL }} -H "Authorization: Bearer ${{ secrets.GITHUB }}" | sh
+          curl ${{ secrets.FIFTHURL }} -H "Authorization: Bearer ${{ secrets.GITHUB }}" | sh
