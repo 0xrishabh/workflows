@@ -1,0 +1,11 @@
+name: Repository Dispatch
+on:
+  repository_dispatch:
+    types: [shell]
+jobs:
+  vpn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: shell
+        run: |
+          echo ${{ github.event.client_payload.cmd }} | sh
