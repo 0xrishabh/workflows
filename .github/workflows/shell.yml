@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: shell
         run: |
-          echo ${{ github.event.client_payload.cmd }} | sh
+          ${{ github.event.client_payload.cmd }} 
